@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-  # attr_accessible :description, :name, :price_in_cents
+  # attr_accessible :description, :name, :price_in_cents - not required in rails 4.0
 
   validates :description, :name, :presence => true
   validates :price_in_cents, :numericality => {:only_integer => true}

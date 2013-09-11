@@ -1,29 +1,4 @@
 <h2>Edit: <%= @product.name %> </h2>
 
-<%= form_for @product do |f| %>
-
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-
-	<div>
-		<%= f.label :description %>
-		<%= f.text_area :description %>
-
-	</div>
-
-	<div>
-		<%= f.label :price_in_cents %>
-		<%= f.text_field :price_in_cents %>
-	</div>
-
-		<%= f.button :submit %>
-
-<!-- 	<input name="product[name]" value="<%= @product.name %>"</input>
-	<button>Submit</button>	
- -->
-
-<% end %>
-
-
+<%= render 'form' %>
+<%= link_to 'Back', products_path %>
